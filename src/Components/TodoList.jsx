@@ -1,6 +1,6 @@
 import Todo from "./Todo";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos , onComplete}) => {
 
 
   const renderTodos = () => {
@@ -8,7 +8,7 @@ const TodoList = ({ todos }) => {
 
     return todos.map((todo) => {
       return (
-        <Todo key={todo.id} todo={todo}/>
+        <Todo key={todo.id} todo={todo} onComplete={()=>onComplete(todo.id) } />
       );
     });
   };
