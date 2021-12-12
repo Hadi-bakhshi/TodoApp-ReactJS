@@ -15,18 +15,18 @@ const TodoApp = () => {
   };
 
   const completeTodo = (id) => {
-    const index = todos.findIndex((todo)=>todo.id===id);
-    const newTodos ={...todos[index]};
+    const index = todos.findIndex((todo) => todo.id === id);
+    const newTodos = { ...todos[index] };
     newTodos.isCompleted = !newTodos.isCompleted;
-    const newTodosList = [...todos]; 
+    const newTodosList = [...todos];
     newTodosList[index] = newTodos;
     setTodos(newTodosList);
-  }
+  };
 
   return (
     <div className="container">
       <TodoForm addTodoHandler={addTodoHandler} />
-      <TodoList todos={todos} onComplete={completeTodo}/>
+      <TodoList todos={todos} onComplete={completeTodo} />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-
 const TodoForm = (props) => {
-
   const [todoInput, setTodoInput] = useState(" ");
 
   const changeHandler = (e) => {
@@ -12,7 +10,7 @@ const TodoForm = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if(!todoInput){
+    if (!todoInput) {
       alert("Please enter a todo");
       return;
     }
