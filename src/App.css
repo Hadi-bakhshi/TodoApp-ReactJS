@@ -33,3 +33,16 @@
   text-decoration: line-through;
   color: #08c447;
 }
+::placeholder {
+  color: rgb(150, 135, 135);
+}
+
+input{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px 3px;
+  outline: none;
+}
+input:focus{
+  border: 2px solid blueviolet;
+}
