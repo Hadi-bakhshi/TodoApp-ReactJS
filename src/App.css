@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 10rem;
+  width: 20rem;
   margin: 10px;
 }
 .completed{
@@ -45,4 +45,35 @@ input{
 }
 input:focus{
   border: 2px solid blueviolet;
+  width: 200px;
+}
+
+.formControl{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+  margin-bottom: 20px;
+}
+.button{
+  color: #6d28d9;
+  background-color: #fff;
+  border: 1px solid #6d28d9;
+  border-radius: 8px;
+  outline: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.remove{
+  color: rgb(236, 68, 68);
+  border: 1px solid rgb(236, 68, 68);
+  margin-left: 10px;
+}
+.addTodo{
+  color:#fff ;
+  background-color: #6d28d9;
+}
+.updateTodo{
+  background-color: #fff;
+  color: #6d28d9;
 }
