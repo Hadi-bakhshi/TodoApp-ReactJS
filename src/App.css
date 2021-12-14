@@ -1,5 +1,6 @@
 .App {
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,9 +15,9 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 40rem;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -39,7 +40,7 @@
 
 input{
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 5px 3px;
   outline: none;
 }
@@ -76,4 +77,30 @@ input:focus{
 .updateTodo{
   background-color: #fff;
   color: #6d28d9;
+}
+.todoText{
+  cursor: pointer;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+
+}
+header span{
+  margin-right: 20px;
+  display: inline-block;
+  width: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  height: 20px;
+  background-color: #d0c7f7;
+  color: #6d28d9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
