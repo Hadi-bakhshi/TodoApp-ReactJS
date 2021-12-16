@@ -1,14 +1,17 @@
-const NavBar = ({ onCompletedTodos }) => {
+
+const NavBar = ({ onCompletedTodos,onSelect,status}) => {
+
+ 
+
+  if (!onCompletedTodos) return <h2>Set your daily todos</h2>;
   return (
     <header>
-      {onCompletedTodos ? (
-        <>
-          <span>{onCompletedTodos}</span>
-          <h2> is not completed</h2>
-        </>
-      ) : (
-        <h2>Set your daily todos</h2>
-      )}
+      <span>{onCompletedTodos}</span> <h2> is not completed</h2>
+      <select onChange={onSelect} value={status}>
+        <option value="All">All</option>
+        <option value="Completed">Completed</option>
+        <option value="Uncompleted">Uncompleted</option>
+      </select>
     </header>
   );
 };
