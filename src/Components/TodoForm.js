@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRef } from "react";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 const TodoForm = (props) => {
   const [todoInput, setTodoInput] = useState(props.edit ? props.edit.text : "");
@@ -34,7 +35,7 @@ const TodoForm = (props) => {
           onChange={changeHandler}
           ref={inputRef}
         />
-        <button className={`button ${props.edit ? "updateTodo" : "addTodo"}`} type="submit">{props.edit ? "Update" : "Add"}</button>
+        <button className={`button ${props.edit ? "updateTodo" : "addTodo"}`} type="submit">{props.edit ? "Update" : <BsFillPlusCircleFill/>}</button>
       </div>
     </form>
   );

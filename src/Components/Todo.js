@@ -1,3 +1,6 @@
+import { BiEdit } from "react-icons/bi";
+import { BiTrash } from "react-icons/bi";
+
 const Todo = ({ todo, onComplete, onEdit, onDelete }) => {
   return (
     <div>
@@ -9,8 +12,15 @@ const Todo = ({ todo, onComplete, onEdit, onDelete }) => {
           {todo.text}
         </div>
         <div>
-          <button className="button" onClick={onEdit}>Edit</button>
-          <button className="button remove" onClick={onDelete}>Delete</button>
+          <button
+            className="button edit"
+            onClick={onEdit}
+          >
+            <BiEdit />
+          </button>
+          <button className="button remove" onClick={onDelete}>
+            <BiTrash />
+          </button>
         </div>
       </div>
     </div>

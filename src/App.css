@@ -1,11 +1,9 @@
 .App {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
-  padding: 10px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .App h1 {
@@ -14,23 +12,23 @@
 
 .container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
 }
-.todo{
+.todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 20rem;
   margin: 10px;
 }
-.completed{
+.completed {
   text-decoration: line-through;
   color: #08c447;
 }
@@ -38,47 +36,63 @@
   color: rgb(150, 135, 135);
 }
 
-input{
+input {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px 3px;
   outline: none;
 }
-input:focus{
+input:focus {
   border: 2px solid blueviolet;
   width: 200px;
 }
 
-.formControl{
+.formControl {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 20rem;
   margin-bottom: 20px;
 }
-.button{
+.button {
   color: #6d28d9;
   background-color: #fff;
-  border: 1px solid #6d28d9;
+  border: none;
   border-radius: 8px;
   outline: none;
   padding: 5px 10px;
   cursor: pointer;
 }
-.remove{
-  color: rgb(236, 68, 68);
-  border: 1px solid rgb(236, 68, 68);
-  margin-left: 10px;
+.edit {
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in-out;
 }
-.addTodo{
-  color:#fff ;
+.remove {
+  color: rgb(236, 68, 68);
+  margin-left: 10px;
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in-out;
+}
+.remove:hover {
+  transform: scale(1.2);
+}
+.edit:hover {
+  transform: scale(1.2);
+}
+.addTodo {
+  font-size: 1.5rem;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.addTodo:hover {
+  transform: rotate3d(0, 0, 1, 360deg);
+}
+.updateTodo {
+  color: #fff;
   background-color: #6d28d9;
 }
-.updateTodo{
-  background-color: #fff;
-  color: #6d28d9;
-}
-.todoText{
+.todoText {
   cursor: pointer;
   font-weight: bold;
 }
@@ -88,9 +102,8 @@ header {
   margin-bottom: 20px;
   justify-content: center;
   align-items: center;
-
 }
-header span{
+header span {
   margin-right: 20px;
   display: inline-block;
   width: 20px;
@@ -105,7 +118,7 @@ header span{
   align-items: center;
 }
 
-.select{
+.select {
   width: 150px;
   margin-left: 1rem;
 }
