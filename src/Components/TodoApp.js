@@ -9,7 +9,7 @@ const TodoApp = () => {
   const [status, setStatus] = useState("All");
 
   useEffect(() => {
-    filteredTodos(status);
+    filterTodos(status);
   }, [todos, status]);
 
   const addTodo = (todoInput) => {
@@ -58,16 +58,16 @@ const TodoApp = () => {
   };
 
   const selectHandler = (e) => {
-    setStatus(e.target.value);
-    filterTodos(e.target.value);
-  };
+      setStatus(e.target.value);
+      filterTodos(e.target.value);
+  }
 
   return (
     <div className="container">
       <NavBar
         onCompletedTodos={todos.filter((t) => !t.isCompleted).length}
-        onSelect={selectHandler}
-        status={status}
+    onSelect={selectHandler}
+status={status}
       />
       <TodoForm addTodoHandler={addTodo} />
       <TodoList
