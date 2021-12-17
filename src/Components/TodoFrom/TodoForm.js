@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+import './todoform.css'
 
 const TodoForm = (props) => {
   const [todoInput, setTodoInput] = useState(props.edit ? props.edit.text : "");

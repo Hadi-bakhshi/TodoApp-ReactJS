@@ -1,0 +1,32 @@
+.formControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  margin-bottom: 20px;
+}
+
+.addTodo {
+  font-size: 1.7rem;
+  margin-left: 10px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.addTodo:hover {
+  transform: rotate3d(0, 0, 1, 360deg);
+}
+
+input[type=text] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 3px;
+  outline: none;
+}
+input[type=text]:focus  {
+  border: 2px solid blueviolet;
+  width: 200px;
+}
+::placeholder {
+  color: rgb(150, 135, 135);
+}

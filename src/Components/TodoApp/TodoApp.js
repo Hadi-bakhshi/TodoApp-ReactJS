@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import NavBar from "./NavBar";
-import TodoForm from "./TodoForm";
-import TodoList from "./TodoList";
+import NavBar from "../NavBar/NavBar";
+import TodoForm from "../TodoFrom/TodoForm";
+import TodoList from "../TodoList/TodoList";
+import './TodoApp.css'
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);

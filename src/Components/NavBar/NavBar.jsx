@@ -1,4 +1,5 @@
 import Select from "react-select";
+import './NavBar.css';
 
 const options = [
   { value: "All", label: "All" },

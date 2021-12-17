@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  header span {
+    margin-right: 20px;
+    display: inline-block;
+    width: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 20px;
+    background-color: #d0c7f7;
+    color: #6d28d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .select {
+    width: 150px;
+    margin-left: 1rem;
+  }

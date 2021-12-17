@@ -1,0 +1,72 @@
+.todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  /* border: 1px solid black; */
+  width: 25rem;
+  margin: 10px;
+}
+.todoText {
+  width: 70%;
+  word-wrap: break-word;
+  white-space: wrap;
+  cursor: pointer;
+  font-weight: bold;
+}
+.completed {
+  text-decoration: line-through;
+  color: #08c447;
+}
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.taskCheckbox {
+  display: inline;
+  background-color: #6d28d9;
+  width: 18px;
+  height: 17px;
+  margin-right: 9px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.taskCheckbox:hover {
+  transform: scale(1.2);
+}
+.button {
+  color: #6d28d9;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.edit {
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in-out;
+}
+.remove {
+  color: rgb(236, 68, 68);
+  margin-left: 5px;
+  font-size: 1.3rem;
+  transition: all 0.5s ease-in-out;
+}
+.remove:hover {
+  transform: scale(1.2);
+}
+.edit:hover {
+  transform: scale(1.2);
+}
+.updateTodo {
+    color: #6d28d9;
+    background-color: #fff;
+    border: 1px solid #6d28d9;
+    margin-left: 5px;
+    font-weight: bold;
+  }
