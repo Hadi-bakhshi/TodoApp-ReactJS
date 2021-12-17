@@ -1,5 +1,6 @@
 import Select from "react-select";
-import './NavBar.css';
+import Typewriter from "typewriter-effect";
+import "./NavBar.css";
 
 const options = [
   { value: "All", label: "All" },
@@ -7,10 +8,25 @@ const options = [
   { value: "Uncompleted", label: "Uncompleted" },
 ];
 const NavBar = ({ onCompletedTodos, onChange, selectedOption }) => {
-  if (!onCompletedTodos) return <h2>Set your daily todos</h2>;
+  if (!onCompletedTodos)
+    return (
+      <div className="navbartitle">
+        <Typewriter
+          options={{
+            strings: [
+              "It seems that you are done",
+              "or",
+              "Set your daily tasks to do",
+            ],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </div>
+    );
   return (
     <header>
-      <span>{onCompletedTodos}</span> <h2> is not completed</h2>
+      <span>{onCompletedTodos}</span> <h2> Tasks To Do</h2>
       <Select
         value={selectedOption}
         onChange={onChange}

@@ -1,0 +1,7 @@
+.taskContainer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+  
+}

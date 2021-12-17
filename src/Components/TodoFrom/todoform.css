@@ -7,7 +7,8 @@
 }
 
 .addTodo {
-  font-size: 1.7rem;
+  font-size: 2rem;
+  margin-top: 5px;
   margin-left: 10px;
   border: none;
   transition: all 0.5s ease-in-out;
@@ -22,10 +23,11 @@ input[type=text] {
   border-radius: 5px;
   padding: 5px 3px;
   outline: none;
+  width: 200px;
 }
 input[type=text]:focus  {
   border: 2px solid blueviolet;
-  width: 200px;
+  width: 250px;
 }
 ::placeholder {
   color: rgb(150, 135, 135);

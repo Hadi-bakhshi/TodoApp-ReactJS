@@ -23,3 +23,8 @@ header {
     width: 150px;
     margin-left: 1rem;
   }
+.navbartitle{
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}

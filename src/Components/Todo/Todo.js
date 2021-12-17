@@ -4,7 +4,7 @@ import './Todo.css'
 
 const Todo = ({ todo, onComplete, onEdit, onDelete }) => {
   return (
-    <div>
+    <div className="todo-container">
       <div className="todo">
         <div  className={`todoText ${todo.isCompleted ? "completed" : ""} `}>{todo.text}</div>
         <div className="btnContainer">
