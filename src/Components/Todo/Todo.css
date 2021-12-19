@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 .todo{
   display: flex;
@@ -10,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   width: 25rem;
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
 }
 
 .todoText {
@@ -44,7 +43,7 @@
 }
 .button {
   color: #6d28d9;
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   border-radius: 8px;
   outline: none;

@@ -3,8 +3,12 @@ import NavBar from "../NavBar/NavBar";
 import TodoForm from "../TodoFrom/TodoForm";
 import TodoList from "../TodoList/TodoList";
 import './TodoApp.css'
+import { ThemeContext } from "../../context";
+import { useContext } from "react";
 
 const TodoApp = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [selectedOption, setSelectedOption] = useState("All");
@@ -64,7 +68,11 @@ const TodoApp = () => {
   }
 
   return (
-    <div className="container">
+    <div style={{
+      backgroundColor: darkMode ? "#666E7E" : "",
+      color: darkMode && "white",
+      border: darkMode && "1px solid #666E7E",
+    }} className="container">
       <NavBar
         onCompletedTodos={todos.filter((t) => !t.isCompleted).length}
         onChange={selectHandler}

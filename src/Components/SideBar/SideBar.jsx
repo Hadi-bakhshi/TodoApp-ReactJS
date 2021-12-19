@@ -1,23 +1,90 @@
-import styles from "./sidebar.module.css";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useState, useContext } from "react";
+import { ThemeContext } from "../../context";
+import "./sidebar.css";
+import Sun from "../../img/sun.png";
+import Moon from "../../img/moon.png";
+import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineCalendar } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BiCategory } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+
 const SideBar = () => {
+  const [isCollapse, setIsCollapse] = useState(true);
+
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   const nightModeHandler = () => {
-    document.documentElement.classList.toggle("dark-mode");
+    theme.dispatch({ type: "TOGGLE" });
+  };
+
+  const collapseHandler = () => {
+    setIsCollapse(!isCollapse);
   };
 
   return (
-    <div className={styles.sidebarContainer}>
-      <div className={styles.nighty}>
-        <button className={styles.nightbtn} onClick={nightModeHandler}>
+    <div
+      style={{
+        backgroundColor: darkMode ? "#1D2537" : "",
+        color: darkMode && "white",
+      }}
+      className="sidebarContainer"
+    >
+      <span onClick={collapseHandler} className={isCollapse ? "menu" : "offer"}>
+        <AiOutlineMenu />
+      </span>
+      <span
+        onClick={collapseHandler}
+        className={!isCollapse ? "closeMenu" : "offer"}
+      >
+        <AiOutlineClose />
+      </span>
+
+      {/* 
+      <div className={isCollapse ? "nightycollapse" : "nighty"}>
+        <button className="nightbtn" onClick={nightModeHandler}>
           <BsFillMoonStarsFill />
         </button>
-      </div>
-      <ul>
-        <li className={styles.sidebaritems}><a href="#">Home</a></li>
-        <li className={styles.sidebaritems}><a href="#">Calender</a></li>
-        <li className={styles.sidebaritems}><a href="#">Categories</a></li>
-        <li className={styles.sidebaritems}><a href="#">Favorite</a></li>
+      </div> */}
+
+      <ul className={isCollapse ? "collapse" : ""}>
+        <li className="sidebaritems">
+          <span>
+            <AiOutlineHome />
+          </span>
+          <a href="#">Home</a>
+        </li>
+        <li className="sidebaritems">
+          <span>
+            <AiOutlineCalendar />
+          </span>
+          <a href="#">Calender</a>
+        </li>
+        <li className="sidebaritems">
+          <span>
+            <BiCategory />
+          </span>
+          <a href="#">Categories</a>
+        </li>
+        <li className="sidebaritems">
+          <span>
+            <AiOutlineHeart />
+          </span>
+          <a href="#">Favorite</a>
+        </li>
       </ul>
+      <div className="t">
+        <img src={Sun} alt="" className="t-icon" />
+        <img src={Moon} alt="" className="t-icon" />
+        <div
+          className="t-button"
+          onClick={nightModeHandler}
+          style={{ left: theme.state.darkMode ? 0 : 20 }}
+        ></div>
+      </div>
     </div>
   );
 };
