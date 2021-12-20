@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import TodoForm from "../TodoFrom/TodoForm";
@@ -16,6 +17,7 @@ const TodoApp = () => {
   useEffect(() => {
     filterTodos(selectedOption.value);
   }, [todos, selectedOption]);
+
 
   const addTodo = (todoInput) => {
     const newTodo = {
