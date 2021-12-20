@@ -36,7 +36,7 @@ const TodoForm = (props) => {
       <div className="formControl">
         <input
         style={{
-          backgroundColor: darkMode ? "#666E7E" : "",
+          backgroundColor: darkMode ? "#555559" : "",
           color: darkMode && "white",
         
         }}
@@ -49,7 +49,7 @@ const TodoForm = (props) => {
         <button
           style={{
             backgroundColor: darkMode ? "transparent" : "",
-            color: darkMode && "#ccc",
+            color: darkMode && "#0E1428",
           }}
           className={`button ${props.edit ? "updateTodo" : "addTodo"}`}
           type="submit"

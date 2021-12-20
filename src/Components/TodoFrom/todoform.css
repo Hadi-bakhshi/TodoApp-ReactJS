@@ -32,3 +32,9 @@ input[type=text]:focus  {
 ::placeholder {
   color: rgb(150, 135, 135);
 }
+
+@media only screen and (max-width: 550px){
+  .formControl{
+    width: 10rem;
+  }
+}

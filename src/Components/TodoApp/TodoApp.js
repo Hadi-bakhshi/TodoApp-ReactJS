@@ -69,11 +69,11 @@ const TodoApp = () => {
 
   return (
     <div style={{
-      backgroundColor: darkMode ? "#666E7E" : "",
+      backgroundColor: darkMode ? "#555559" : "",
       color: darkMode && "white",
-      border: darkMode && "1px solid #666E7E",
+      border: darkMode && "1px solid #555559",
     }} className="container">
-      <NavBar
+      <NavBar 
         onCompletedTodos={todos.filter((t) => !t.isCompleted).length}
         onChange={selectHandler}
         selectedOption={selectedOption}

@@ -10,7 +10,7 @@ function App() {
   return (
     <div
       style={{
-        backgroundColor: darkMode ? "#222" : "white",
+        backgroundColor: darkMode ? "#1D1D2D" : "white",
         color: darkMode && "white",
       }}
       className="App"

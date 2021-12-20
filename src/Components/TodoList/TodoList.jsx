@@ -33,7 +33,7 @@ const TodoList = ({ todos, onComplete, onDelete, onUpdateTodo }) => {
   };
   return (
     <div style={{
-      backgroundColor: darkMode ? "#666E7E" : "",
+      backgroundColor: darkMode ? "#555559" : "",
       color: darkMode && "white",
     }} className="taskContainer">{edit.id ? (<TodoForm addTodoHandler={editTodo} edit={edit} />):(renderTodos())}</div>
   );

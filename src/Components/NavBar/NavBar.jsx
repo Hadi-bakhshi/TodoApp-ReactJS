@@ -8,6 +8,7 @@ const options = [
   { value: "Uncompleted", label: "Uncompleted" },
 ];
 const NavBar = ({ onCompletedTodos, onChange, selectedOption }) => {
+
   if (!onCompletedTodos)
     return (
       <div className="navbartitle">
@@ -27,7 +28,7 @@ const NavBar = ({ onCompletedTodos, onChange, selectedOption }) => {
   return (
     <header>
       <span>{onCompletedTodos}</span> <h2> Tasks To Do</h2>
-      <Select
+      <Select 
         value={selectedOption}
         onChange={onChange}
         options={options}

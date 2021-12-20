@@ -28,7 +28,7 @@ const SideBar = () => {
   return (
     <div
       style={{
-        backgroundColor: darkMode ? "#1D2537" : "",
+        backgroundColor: darkMode ? "#555559" : "",
         color: darkMode && "white",
       }}
       className="sidebarContainer"
@@ -51,25 +51,49 @@ const SideBar = () => {
       </div> */}
 
       <ul className={isCollapse ? "collapse" : ""}>
-        <li className="sidebaritems">
+        <li
+          style={{
+            backgroundColor: darkMode ? "#686B74" : "",
+            color: darkMode && "white",
+          }}
+          className="sidebaritems"
+        >
           <span>
             <AiOutlineHome />
           </span>
           <a href="#">Home</a>
         </li>
-        <li className="sidebaritems">
+        <li
+          style={{
+            backgroundColor: darkMode ? "#686B74" : "",
+            color: darkMode && "white",
+          }}
+          className="sidebaritems"
+        >
           <span>
             <AiOutlineCalendar />
           </span>
           <a href="#">Calender</a>
         </li>
-        <li className="sidebaritems">
+        <li
+          style={{
+            backgroundColor: darkMode ? "#686B74" : "",
+            color: darkMode && "white",
+          }}
+          className="sidebaritems"
+        >
           <span>
             <BiCategory />
           </span>
           <a href="#">Categories</a>
         </li>
-        <li className="sidebaritems">
+        <li
+          style={{
+            backgroundColor: darkMode ? "#686B74" : "",
+            color: darkMode && "white",
+          }}
+          className="sidebaritems"
+        >
           <span>
             <AiOutlineHeart />
           </span>

@@ -24,7 +24,7 @@ const Todo = ({ todo, onComplete, onEdit, onDelete }) => {
           <button
             style={{
               backgroundColor: darkMode ? "transparent" : "",
-              color: darkMode && "#ccc",
+              color: darkMode && "#0E1428",
             }}
             className="button edit"
             onClick={onEdit}
@@ -34,7 +34,7 @@ const Todo = ({ todo, onComplete, onEdit, onDelete }) => {
           <button
             style={{
               backgroundColor: darkMode ? "transparent" : "",
-              color: darkMode && "#ccc",
+              color: darkMode && "red",
             }}
             className="button remove"
             onClick={onDelete}

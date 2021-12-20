@@ -123,3 +123,14 @@ a {
 .collapse .sidebaritems a {
   display: none;
 }
+@media only screen and (max-width: 650px){
+  .sidebaritems a{
+    display: none;
+  }
+  .closeMenu{
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
+}
