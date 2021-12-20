@@ -20,7 +20,9 @@
 }
 .completed {
   text-decoration: line-through;
-  color: #08c447;
+  text-decoration-color: #1D1D2D;
+  text-decoration-thickness: 2px;
+  color: #999;
 }
 .btnContainer {
   display: flex;
